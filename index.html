@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>آنالیز هزینه-فایده سامانه هشدار سریع زلزله در واشینگتن</title>
+<meta name="description" content="ارائه: Benefits and Costs of EEW">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="is-cover">
+
+<!-- ===== Topbar ===== -->
+<header class="topbar">
+  <h1 class="topbar__title">آنالیز هزینه-فایده سامانه هشدار سریع زلزله در واشینگتن</h1>
+  <div class="topbar__institution">
+    <img class="topbar__logo" src="IIEES logo white transparent.png" alt="نشان پژوهشگاه بین‌المللی زلزله‌شناسی و مهندسی زلزله">
+    <span class="topbar__meta">پژوهشگاه بین‌المللی زلزله‌شناسی و مهندسی زلزله</span>
+  </div>
+</header>
+
+<nav class="presentation-nav" id="presentationNav" aria-label="مسیر ارائه" hidden>
+  <button class="presentation-nav__home" id="homeButton" type="button" aria-label="بازگشت به صفحه عنوان" title="صفحه عنوان">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8v9.7a.5.5 0 0 1-.5.5h-5.2v-6.5H8.7V21H3.5a.5.5 0 0 1-.5-.5z"/></svg>
+  </button>
+  <div class="presentation-nav__scroller" id="presentationNavItems"></div>
+</nav>
+
+<div class="layout">
+
+  <!-- ===== Main ===== -->
+  <main class="main">
+
+    <div id="slides">
+
+      <!-- 1 -->
+      <section class="slide slide--cover is-active" id="s1" data-nav="عنوان" data-crumb="آغاز">
+        <div class="cover__institution">
+          <img class="cover__logo" src="IIEES logo black transparent.png" alt="نشان پژوهشگاه بین‌المللی زلزله‌شناسی و مهندسی زلزله">
+        </div>
+        <h2 class="slide__title">آنالیز هزینه-فایده سامانه هشدار سریع زلزله در واشینگتن</h2>
+        <p class="slide__subtitle">Benefit-Cost Analysis for Earthquake Early Warning in Washington State, 2019, Andrew Bouta</p>
+        <div class="cover__meta">
+          <p>ارائه‌دهنده:<strong> محمد مولایی‌نیا</strong></p>
+          <p>استاد راهنما:<strong> دکتر انوشیروان انصاری</strong></p>
+          <p>استاد مشاور:<strong> دکتر علی مقصودی</strong></p>
+          <P>پاییز ۱۴۰۵</P>
+        </div>
+        <div class="cover__action">
+          <button class="info-btn start-btn" id="startPresentation" type="button">شروع</button>
+        </div>
+      </section>
+
+      <!-- مسیر ارائه -->
+      <section class="slide slide--agenda" id="agenda" data-nav="مسیر ارائه">
+        <h2 class="slide__title">مسیر ارائه</h2>
+        <div class="agenda__list" id="agendaList"></div>
+        <button class="presentation-nav__home agenda__home" id="agendaHomeButton" type="button" aria-label="بازگشت به صفحه عنوان" title="صفحه عنوان">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8v9.7a.5.5 0 0 1-.5.5h-5.2v-6.5H8.7V21H3.5a.5.5 0 0 1-.5-.5z"/></svg>
+        </button>
+      </section>
+
+      <!-- 2 -->
+      <section class="slide" id="s2" data-nav="بررسی اولیه" data-crumb="نگاه کلی به پژوهش">
+        <div>
+          <span class="slide__kicker">بررسی اولبه</span>
+          <h2 class="slide__title">آنالیز هزینه-فایده سامانه هشدار سریع زلزله در واشینگتن</h2>
+          <div class="slide__body">
+            <div class="slide-meta-row">
+              <div class="slide-meta-row__text">
+                <p class="lead">مجله: Natural Hazards Review Vol. 21, No. 2</p>
+                <p class="lead">سال: 2019</p>
+                <p class="lead">نویسندگان: اندرو بوتا، آلیسا آهن، آن بوستروم، جان ویدال </p>
+              </div>
+              <img class="slide-meta-row__image" src="Natural Hazards Review cover.png" alt="جلد مجله Natural Hazards Review">
+            </div>
+            <div class="grid grid--2">
+              <div class="card">
+                <h3 class="card__title">نوع پژوهش</h3>
+                <p class="card__text">پزوهش کمی-کاربردی</p>
+              </div>
+              <div class="card">
+                <h3 class="card__title">هدف پژوهش</h3>
+                <p class="card__text">اطلاع‌رسانی و ارائه ارزیابی ارزش اقتصادی و مستندات فنی جهت تصمیم‌گیری در خصوص پیاده‌سازی کامل و تداوم عملیاتی سامانه EEWS </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section class="slide" id="s3" data-nav="آنالیز های گذشته" data-crumb="آنالیز های گذشته">
+        <div>
+          <span class="slide__kicker">رویکرد</span>
+          <h2 class="slide__title">رویکرد های محاسبه ارزش سیستم EEW</h2>
+          <div class="slide__body">
+            <div class="tree-diagram tree-diagram--horizontal" aria-label="نمودار درختی رویکردها">
+              <div class="tree-node tree-node--root">رویکردها</div>
+              <div class="tree-children tree-children--two">
+                <div class="tree-branch">
+                  <div class="tree-node">رویکرد ارزش‌گذاری مشروط</div>
+                  <div class="tree-children tree-children--two">
+                    <div class="tree-node tree-node--leaf">روش پرسش باز</div>
+                    <div class="tree-node tree-node--leaf">روش همه‌پرسی</div>
+                  </div>
+                </div>
+                <div class="tree-branch">
+                  <div class="tree-node">رویکرد منافع جایگزین</div>
+                  <div class="tree-children">
+                    <div class="tree-node tree-node--leaf">اعمال نسبت هزینه و فایده یک سیستم دیگر به این سیستم</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid--1">
+              <div class="card">
+                <h3 class="card__title">رویکرد پژوهش</h3>
+                <p class="card__text">رویکرد اجتناب از هزینه، برآورد تفاوت در خسارت اقتصادی ناشی از زلزله با وجود اقدامات کاهشی در مقایسه با زلزله بدون این اقدامات</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="slide__kicker">اثر بخشی</span>
+          <h2 class="slide__title">اثر بخشی EEW</h2>
+          <div class="slide__body">
+            <div class="tree-diagram tree-diagram--vertical" aria-label="نمودار عوامل اثر بخشی">
+              <div class="tree-node tree-node--root">عوامل</div>
+              <div class="tree-children tree-children--two">
+                <div class="tree-node tree-node--leaf">تأثیر پیام بر دریافت‌کننده</div>
+                <div class="tree-node tree-node--leaf">نگهداری و پشتیبانی</div>
+              </div>
+            </div>
+            <h3 class="slide__subtitle">گام‌های شناختی دریافت‌کننده</h3>
+            <ul>
+              <li>شنیدن</li>
+              <li>درک کردن</li>
+              <li>باور کردن</li>
+              <li>شخصی‌سازی (مرتبط دانستن خطر با خود)</li>
+              <li>تصمیم‌گیری</li>
+              <li>پاسخ‌دهی</li>
+            </ul>
+            <div class="tree-diagram tree-diagram--horizontal tree-diagram--effect" aria-label="نمودار بیشترین اثر بخشی برای دریافت‌کننده">
+              <div class="tree-node tree-node--root">بیشترین اثر بخشی برای دریافت‌کننده</div>
+              <div class="tree-children tree-children--four">
+                <div class="tree-node tree-node--leaf">درونی‌سازی(گرفتن توجه گیرنده)</div>
+                <div class="tree-node tree-node--leaf">توزیع(پوشش گسترده)</div>
+                <div class="tree-node tree-node--leaf">توضیح(چرا در خطر است)</div>
+                <div class="tree-node tree-node--leaf">اقدام(سرنخ درباره اقدامات)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="slide" id="s4" data-nav="روش آنالیز" data-crumb="روش آنالیز">
+        <div>
+          <span class="slide__kicker">متدولوژی</span>
+          <h2 class="slide__title">روش آنالیز هزینه-فایده</h2>
+          <div class="slide__body">
+            <p class="callout"><span class="callout__title">نکته: </span>همه زیان های قابل کاهش توسظ سیستم در این پژوهش نیامده است.</p>
+            <p class="lead">بازه مورد بررسی 50 سال است.</p>
+          </div>
+        </div>
+        <div>
+          <span class="slide__kicker">scenario</span>
+          <h2 class="slide__title">سناریو های مورد استفاده</h2>
+          <div class="slide__body">
+            <div class="tree-diagram tree-diagram--vertical" aria-label="نمودار عوامل اثر بخشی">
+              <div class="tree-node tree-node--root">سناریو ها</div>
+              <div class="tree-children tree-children--two">
+                <div class="tree-node tree-node--leaf">20 سناریو زلزله</div>
+                <div class="tree-node tree-node--leaf">3 سناریو شلوغی بیمارستان و نرخ مرگ و میر</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="slide__kicker">Cost</span>
+          <h2 class="slide__title">هزینه های سیستم</h2>
+          <div class="slide__body">
+            <div class="tree-diagram tree-diagram--horizontal tree-diagram--effect" aria-label="نمودار هزینه ها">
+              <div class="tree-node tree-node--root">انواع هزینه ها</div>
+              <div class="tree-children tree-children--three">
+                <div class="tree-node tree-node--leaf">هزینه سرمایه ای و عملیاتی</div>
+                <div class="tree-node tree-node--leaf">هشدار از دست رفته</div>
+                <div class="tree-node tree-node--leaf">هشدار کاذب</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="slide__kicker">Benefit</span>
+          <h2 class="slide__title">فایده های سیستم</h2>
+          <div class="slide__body">
+            <div class="tree-diagram tree-diagram--horizontal tree-diagram--effect" aria-label="نمودار هزینه ها">
+              <div class="tree-node tree-node--root">منابع فایده ها</div>
+              <div class="tree-children tree-children--three">
+                <div class="tree-node tree-node--leaf">تاسیسات (آب ، برق)</div>
+                <div class="tree-node tree-node--leaf">خدمات اضطراری (بیمارستان ، آتشنشانی)</div>
+                <div class="tree-node tree-node--leaf">اقدامات فردی</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="slide__kicker">پارامتر</span>
+          <h2 class="slide__title">جدول ۳: پارامترهای مورداستفاده در تمامی دسته‌بندی‌ها</h2>
+          <div class="slide__body">
+            <div class="table-wrap">
+              <table class="parameters-table">
+                <caption>Table 3. Parameters used in all categories</caption>
+                <thead>
+                  <tr><th>Parameter</th><th>Description of values used</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Earthquake probabilities</td><td>Shallow: 12%–15% (Petersen et al. 2014)<br>Deep: 84% (Petersen et al. 2014)<br>CSZ mean probability: 9.4% (SD 4.6%) (Goldfinger et al. 2012)<br>Cascadia North Subduction Zone mean probability: 11.6% (SD 5.9%) (Goldfinger et al. 2012)</td></tr>
+                  <tr><td>Predictive accuracy</td><td>True-positive alarm: 94%; missed alarm: 3%; false alarm: 3% (Vidale 2015)</td></tr>
+                  <tr><td>Warning (lead) time</td><td>S-wave velocity: 3.1 km/s (estimated based on Bassin et al. 2000; Shapiro and Ritzwoller 2002; Yang et al. 2008; Gao et al. 2011; Porritt et al. 2011)<br>Warning time: varied location (details in Appendix C of Bouta 2015)</td></tr>
+                  <tr><td>Discount rate</td><td>2%–7% (Harberger 1969; Boardman et al. 2011; Burgess and Zerbe 2011; OMB)</td></tr>
+                  <tr><td>Day’s Curve</td><td>Reduction in property damages per second of EEW: 1.50% (see Appendix II)</td></tr>
+                  <tr><td>Capital, operational costs</td><td>Initial capital investment: $10,133,333 (starting 2015)<br>Annual operational costs: $3,133,333 (starting 2018) (Given et al. 2014)</td></tr>
+                  <tr><td>Missed alarm costs</td><td>All benefits multiplied by the probability of a missed alarm</td></tr>
+                  <tr><td>False alarm costs</td><td>1994: $47,890,000 (AP 2005)<br>2004: $85,170,000 (Schwartz 2004)</td></tr>
+                  <tr class="table-section"><th colspan="2">Utilities parameters (electricity and water)</th></tr>
+                  <tr><td>Number of households</td><td>2,928,217 (US Census 2015)</td></tr>
+                  <tr><td>Demand curve</td><td>See Appendix III</td></tr>
+                  <tr class="table-section"><th colspan="2">Hospitals parameters</th></tr>
+                  <tr><td>Hospital occupancy rate</td><td>See Appendix III</td></tr>
+                  <tr><td>Value of statistical life</td><td>$6,478,250 (FEMA 2009)</td></tr>
+                  <tr><td>Mortality from hospital overcrowding</td><td>See Appendix III</td></tr>
+                  <tr class="table-section"><th colspan="2">Fire stations parameters</th></tr>
+                  <tr><td>Fire engines per station</td><td>1.27 (Haynes and Stein 2014)</td></tr>
+                  <tr><td>Reduction of loss with additional fire engine</td><td>6.37% (Getz 1979)</td></tr>
+                  <tr class="table-section"><th colspan="2">Personal actions parameters</th></tr>
+                  <tr><td>Sender-driven forces</td><td>80% (Fujinawa and Noda 2013)</td></tr>
+                  <tr><td>Receiver-driven forces</td><td>61%–69% (Fujinawa and Noda 2013; Strawderman et al. 2012)</td></tr>
+                  <tr><td>Value of casualties</td><td>See Appendix III</td></tr>
+                  <tr><td>Time-of-day ratios</td><td>See Appendix III</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 -->
+      <section class="slide" id="s5" data-nav="نتایج" data-crumb="نتایج">
+        <div>
+          <span class="slide__kicker">ارزش</span>
+          <h2 class="slide__title">نتیجه کلی پژوهش</h2>
+          <div class="slide__body">
+            <div class="grid grid--1">
+              <div class="card">
+                <h3 class="card__title">289,000,000$</h3>
+                <p class="card__text">ارزش فعلی خالص مثبت طی 50 سال</p>
+              </div>
+              <div class="card">
+                <h3 class="card__title">98.37 %</h3>
+                <p class="card__text">احتمال تخمین حساسیت نتایچ نسبت به فرض های جدول 3 برای مثبت بودن نتیجه با شبیه سازی مونت کارلو</p>
+              </div>
+              <div class="card">
+                <h3 class="card__title">284 الی 295 میلیون دلار</h3>
+                <p class="card__text">بازه نتایج با اطمینان 95 %</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="slide__kicker">نتایج نهایی</span>
+          <h2 class="slide__title">جدول ۵. ارزش فعلی خالص سامانه</h2>
+          <div class="slide__body">
+            <div class="table-wrap">
+              <table>
+                <caption>Table 5. Net present value of proposed Pacific Northwest earthquake early warning system</caption>
+                <thead>
+                  <tr><th>Statistic</th><th>Forecast values (in 2015 dollars)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Mean</td><td>$289,235,131</td></tr>
+                  <tr><td>Minimum</td><td>−$239,588,941</td></tr>
+                  <tr><td>Maximum</td><td>$2,104,581,342</td></tr>
+                  <tr><td>Standard deviation</td><td>$287,103,405</td></tr>
+                  <tr><td>Mean standard error</td><td>$2,871,034</td></tr>
+                  <tr><td>95% confidence interval</td><td>$283,607,904; $294,862,357</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">Note: Outcome of 10,000 Monte Carlo simulations of benefits and costs over 50 years.</p>
+          </div>
+        </div>
+        <div>
+          <span class="slide__kicker">ریز نتایج</span>
+          <h2 class="slide__title">جدول ۶. فایده ها و هزینه‌های سامانه</h2>
+          <div class="slide__body">
+            <div class="table-wrap">
+              <table class="results-table">
+                <caption>Table 6. Benefits and costs of the proposed Pacific Northwest earthquake early warning system</caption>
+                <thead>
+                  <tr><th>Benefits and costs</th><th>Mean (95% confidence interval)</th><th>Largest impact on uncertainty</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="table-section"><th colspan="3">Benefits</th></tr>
+                  <tr class="table-subsection"><th colspan="3">Utility systems</th></tr>
+                  <tr><td>Electricity</td><td>$5,757,892 ($5,723,733; $5,792,051)</td><td><ol><li>Social discount rate</li><li>Price elasticity of electric demand</li><li>Probability of a shallow earthquake</li></ol></td></tr>
+                  <tr><td>Water</td><td>$12,643 ($12,555; $12,731)</td><td><ol><li>Social discount rate?</li><li>Warning time for earthquake scenario SeaTac and County King</li><li>Price elasticity of water demand</li></ol></td></tr>
+                  <tr class="table-subsection"><th colspan="3">Essential facilities</th></tr>
+                  <tr><td>Hospitals scenario 1</td><td>$232,882,839 ($230,755,262; $235,010,416)</td><td><ol><li>Social discount rate?</li><li>Mortality rate from hospital overcrowding?</li><li>Hospital occupancy rate</li></ol></td></tr>
+                  <tr><td>Hospitals scenario 2</td><td>$50,806,965 ($50,143,191; $51,470,739)</td><td><ol><li>Mortality rate from hospital overcrowding?</li><li>Social discount rate?</li><li>Hospital occupancy rate</li></ol></td></tr>
+                  <tr><td>Hospitals scenario 3</td><td>$561,125,914 ($554,617,857; $567,633,972)</td><td><ol><li>Mortality rate from hospital overcrowding?</li><li>Social discount rate</li><li>Hospital occupancy rate</li></ol></td></tr>
+                  <tr><td>Fire stations</td><td>$14,764,322 ($14,682,541; $14,846,102)</td><td><ol><li>Social discount rate?</li><li>Warning time for earthquake scenario SeaTac and County King</li><li>Probability of a CSZ earthquake</li></ol></td></tr>
+                  <tr><td>Personal action</td><td>$72,370,466 ($71,783,728; $72,957,204)</td><td><ol><li>Percentage of casualties that 1 s of warning time could save</li><li>Social discount rate?</li><li>Warning time for earthquake scenario SeaTac and County King</li></ol></td></tr>
+                  <tr><td>Net present benefits</td><td>Lower bound: $143,712,288; Upper bound: $654,031,237</td><td>—</td></tr>
+                  <tr class="table-section"><th colspan="3">Cost</th></tr>
+                  <tr><td>Capital and operational</td><td>$68,289,165</td><td>Social discount rate</td></tr>
+                  <tr class="table-subsection"><th colspan="3">Missed alarms</th></tr>
+                  <tr><td>Scenario 1</td><td>$10,908,797 ($10,825,393; $10,992,200)</td><td><ol><li>Mortality rate from hospital overcrowding?</li></ol></td></tr>
+                  <tr><td>Scenario 2</td><td>$5,175,367 ($5,136,744; $5,213,990)</td><td><ol><li>Social discount rate?</li></ol></td></tr>
+                  <tr><td>Scenario 3</td><td>$21,262,831 ($21,045,680; $21,479,981)</td><td><ol><li>Hospital occupancy rate</li></ol></td></tr>
+                  <tr><td>False alarms</td><td>$3,625,339 ($3,604,642; $3,646,037)</td><td><ol><li>Social discount rate?</li><li>Average cost of a false alarm</li><li>Probability of a CSZ earthquake</li></ol></td></tr>
+                  <tr><td>Net present costs</td><td>Lower bound: $77,089,871; Upper bound: $93,177,335</td><td>—</td></tr>
+                  <tr><td>Benefit/Cost ratio</td><td>Lower bound: 1.86; Upper bound: 7.02</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="slide__kicker">هزینه های سیستم</span>
+          <div class="slide__body">
+            <div class="tree-diagram tree-diagram--horizontal tree-diagram--effect" aria-label="نمودار هزینه ها">
+              <div class="tree-node tree-node--root">هزینه ها</div>
+              <div class="tree-children tree-children--three">
+                <div class="tree-node tree-node--leaf">هزینه سرمایه ای و عملیاتی تعدیل شده در 50 سال: 68 م</div>
+                <div class="tree-node tree-node--leaf">هشدار از دست رفته در سناریو 1 در 50 سال: 11 م</div>
+                <div class="tree-node tree-node--leaf">هشدار کاذب در 50 سال: 4 م</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+</div>
+
+<!-- ===== Modal ===== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal__dialog">
+    <header class="modal__header">
+      <h2 class="modal__title" id="modalTitle"></h2>
+      <button class="modal__close" id="modalClose" type="button" aria-label="بستن">×</button>
+    </header>
+    <div class="modal__body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ===== Modal content store ===== -->
+<div hidden id="modalStore">
+
+  <template data-modal-id="m-goals" data-modal-title="لورم ایپسوم">
+    <ol>
+      <li>تست</li>
+    </ol>
+  </template>
+
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
