@@ -18,6 +18,7 @@
   const modalBody            = document.getElementById('modalBody');
   const modalClose           = document.getElementById('modalClose');
   const modalStore           = document.getElementById('modalStore');
+  let npvChart = null;
 
   /* ── State ────────────────────────────────────────────────────── */
   const slides = Array.from(slidesWrap.querySelectorAll('.slide'));
@@ -91,7 +92,130 @@
     setActiveSlide(contentSlides[current]);
     setNavigationVisibility(true);
     updateContentMeta();
+    if (contentSlides[current]?.id === 's5') requestAnimationFrame(initNpvChart);
     scrollToTop();
+  }
+
+  function gevPdf(x, location, scale, shape) {
+    const z = 1 + shape * ((x - location) / scale);
+    if (z <= 0) return 0;
+    const t = Math.pow(z, -1 / shape);
+    return (1 / scale) * Math.pow(t, shape + 1) * Math.exp(-t);
+  }
+
+  function initNpvChart() {
+    const canvas = document.getElementById('npvPdfChart');
+    if (!canvas || npvChart || typeof Chart === 'undefined') return;
+
+    const points = [];
+    for (let x = -300; x <= 2200; x += 5) {
+      points.push({ x, y: gevPdf(x, 165, 160, 0.18) });
+    }
+
+    const referenceLines = {
+      id: 'npvReferenceLines',
+      afterDraw(chart) {
+        const { ctx, chartArea, scales } = chart;
+        if (!chartArea || !scales.x) return;
+
+        const lines = [
+          { value: 0, label: 'Break-Even ($0M)', color: '#b42318', dash: [6, 5] },
+          { value: 289.2, label: 'Mean: $289.2M', color: '#0b4f6c', dash: [] }
+        ];
+
+        ctx.save();
+        ctx.font = '600 11px Presentation Bilingual, Arial, sans-serif';
+        ctx.textBaseline = 'bottom';
+        lines.forEach(line => {
+          const x = scales.x.getPixelForValue(line.value);
+          if (x < chartArea.left || x > chartArea.right) return;
+          ctx.strokeStyle = line.color;
+          ctx.lineWidth = 1.5;
+          ctx.setLineDash(line.dash);
+          ctx.beginPath();
+          ctx.moveTo(x, chartArea.top);
+          ctx.lineTo(x, chartArea.bottom);
+          ctx.stroke();
+          ctx.setLineDash([]);
+          ctx.fillStyle = line.color;
+          ctx.textAlign = line.value === 0 ? 'left' : 'right';
+          ctx.fillText(line.label, line.value === 0 ? x + 6 : x - 6, chartArea.top - 7);
+        });
+        ctx.restore();
+      }
+    };
+
+    npvChart = new Chart(canvas, {
+      type: 'line',
+      data: {
+        datasets: [
+          {
+            label: 'Loss zone',
+            data: points.filter(point => point.x <= 0),
+            borderColor: '#ef4444',
+            backgroundColor: 'rgba(239, 68, 68, 0.35)',
+            borderWidth: 2,
+            pointRadius: 0,
+            pointHitRadius: 8,
+            fill: 'origin',
+            tension: 0.22
+          },
+          {
+            label: 'Benefit zone',
+            data: points.filter(point => point.x >= 0),
+            borderColor: '#10b981',
+            backgroundColor: 'rgba(16, 185, 129, 0.35)',
+            borderWidth: 2,
+            pointRadius: 0,
+            pointHitRadius: 8,
+            fill: 'origin',
+            tension: 0.22
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 450 },
+        interaction: { mode: 'nearest', intersect: false },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { usePointStyle: true, boxWidth: 8, font: { family: 'Presentation Bilingual, Arial' } }
+          },
+          tooltip: {
+            callbacks: {
+              title(items) {
+                return items.length ? `NPV: $${Number(items[0].parsed.x).toLocaleString('en-US')}M` : '';
+              },
+              label(item) {
+                return `Probability density: ${item.parsed.y.toFixed(6)}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            type: 'linear',
+            min: -300,
+            max: 2200,
+            title: { display: true, text: 'Net Present Value — NPV (Million USD, 2015)' },
+            grid: { color: 'rgba(27, 39, 51, 0.08)' },
+            ticks: {
+              stepSize: 500,
+              callback: value => `${value < 0 ? '−' : ''}$${Math.abs(value).toLocaleString('en-US')}M`
+            }
+          },
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Probability Density' },
+            grid: { color: 'rgba(27, 39, 51, 0.08)' },
+            ticks: { callback: value => Number(value).toFixed(4) }
+          }
+        }
+      },
+      plugins: [referenceLines]
+    });
   }
 
   function buildNavigation() {
